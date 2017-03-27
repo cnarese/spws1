@@ -10,9 +10,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import controller.CustomerRestController;
+import dao.CustomerDAO;
+
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "")
+//@ComponentScan(basePackages = "model")
+//@ComponentScan(basePackages = "controller")
+
+@ComponentScan(basePackageClasses = {CustomerDAO.class, CustomerRestController.class})
 public class AppConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public ViewResolver viewResolver() {

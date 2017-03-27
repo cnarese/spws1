@@ -1,4 +1,4 @@
-package spws1;
+package controller;
 
 
 import org.springframework.stereotype.Controller;
